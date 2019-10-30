@@ -88,7 +88,7 @@ public class Test {
 
 ```
 A : off 最高等级，用于关闭所有日志记录
-B : fatal 指出每个严重的错误事件将会导致应用内程序的推出
+B : fatal 指出每个严重的错误事件将会导致应用内程序的退出
 C : error 指出虽然发生错误事件，但仍然不影响系统的继续运行
 D : warn 表明会出现潜在的错误情形
 E : info 一般和在粗粒度级别上，强调应用程序的运行全程
@@ -147,6 +147,14 @@ log4j.appender.A5.layout=org.apache.log4j.HTMLLayout
 ​	输出样式
 
 ![2019-10-10_003606](img/2019-10-10_003606.png)
+
+# PatternLayout的输出参数含义
+
+参考https://blog.csdn.net/tiansheng1225/article/details/83012916
+
+
+
+
 
 # 完整log4j.properties
 
