@@ -25,7 +25,7 @@ vim .alias
 
 ```
 alias vi='vim'
-alias ll='ls -a'
+alias ll='ls -l'
 ```
 
 保存后退出
