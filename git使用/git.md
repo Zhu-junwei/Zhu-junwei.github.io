@@ -94,7 +94,7 @@ git管理的文件有三种状态
 
 我们可以使用你reset命令将缓存区的文件从缓存区清除
 
-> get reset HEAD LICENSE
+> git reset HEAD LICENSE
 >
 > git status
 
