@@ -223,6 +223,31 @@ info gcc
 #systemctl poweroff
 ```
 
+# 第6章
+
+## touch
+查看文件时间
+```shell
+#查看文件的时间
+#mtime 默认文件内容修改时间 ll bashrc
+#ctime 文件属性修改时间
+#atime 文件最近访问时间
+date;ll bashrc ;ll --time=ctime bashrc ;ll --time=atime bashrc 
+```
+![](./img/20211225_001623.png)
+
+```shell
+#stat 文件名 查看文件时间戳
+stat bashrc
+```
+![](./img/20211225_002055.png)
+
+```shell
+touch -t 201908161846.33 bashrc
+stat bashrc
+```
+![](./img/20211225_002219.png)
+
 
 
 
