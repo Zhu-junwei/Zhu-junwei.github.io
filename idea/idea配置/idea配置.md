@@ -22,6 +22,10 @@
 
 # 配置控制台maven编码
 
+取消`Delegate IDE build/run actions to Maven`(将 IDE 构建/运行操作委托给 Maven)，减少不必要的日志输出。
+
+谨慎设置编码。
+
 ```
 -Dfile.encoding=GBK
 ```
@@ -107,7 +111,9 @@
 
 ![2020-10-27_142202](img/2020-10-27_142202.png)
 
+# 渲染文档注释
 
+![20220520_101205](img/20220520_101205.png)
 
 # Debug不能进入jdk源码问题
 
