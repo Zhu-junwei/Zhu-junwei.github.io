@@ -1,5 +1,19 @@
 [TOC]
 
+# 修改idea配置文件所在目录
+
+修改idea安装目录下的idea.properties文件，防止系统重装时配置文件在C盘被删除。
+
+如修改 E:\idea\bin\idea.properties
+
+```properties
+idea.install.path=E:/idea
+idea.config.path=${idea.install.path}/.IntelliJIdea/config
+idea.system.path=${idea.install.path}/.IntelliJIdea/system
+idea.plugins.path=${idea.config.path}/plugins
+idea.log.path=${idea.system.path}/log
+```
+
 # 配置jdk
 
 ![2020-07-19_231043](img/2020-07-19_231043.png)
@@ -129,7 +143,8 @@
 
 ![2020-10-28_100349](img/2020-10-28_100349.png)
 
-
+# 配置SSH
+![](img/20220706_205445.png)
 
 # maven helper 解决依赖冲突
 
@@ -159,6 +174,15 @@
 
 ![2020-11-15_121335](img/2020-11-15_121335.png)
 
+## 安装显示类注释插件(可选)
+
+> 文件树中显示类的注释，前提在类的开头写好了javadoc注释
+
+![20220608_095819.png](img/20220608_095819.png)
+
+- 取消行末注释
+
+![20220608_135754.png](img/20220608_135754.png)
 
 
 # 激活

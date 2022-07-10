@@ -148,3 +148,12 @@ scope的作用域
 ![2019-07-31_152742](img/2019-07-31_152742.png)
 
 # maven3.6.1+tomcat9.0.8热部署
+
+# 安装jar包到本地仓库
+
+```
+//指定jar包绝对路径
+mvn install:install-file -DgroupId=com.alibaba -DartifactId=fastjson -Dversion=1.2.60 -Dpackaging=jar -Dfile=D:/fastjson-1.2.60.jar
+//进入jar包目录后安装
+mvn install:install-file -DgroupId=com.alibaba -DartifactId=fastjson -Dversion=1.2.60 -Dfile=fastjson-1.2.60.jar -Dpackaging=jar
+```
