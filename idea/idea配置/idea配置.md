@@ -184,6 +184,37 @@ idea.log.path=${idea.system.path}/log
 
 ![20220608_135754.png](img/20220608_135754.png)
 
+## diagrams.net 插件
+
+> draw.io画图工具包
+
+## Chinese Language Pack 插件
+
+> 将idea翻译为中文
+
+## CMD Support 插件
+
+> CMD命令高亮支持
+
+## Gitee 插件
+
+> 写过的代码要提交云端
+
+## GsonFormatPlus 插件
+
+> json开发工具
+
+## Key Promoter X 插件
+
+> 使用idea的快捷键提示
+
+## Maven Helper 插件
+
+> Maven工具
+
+## Translation 插件
+
+> 直接在idea里面翻译英文不香吗
 
 # 激活
 
