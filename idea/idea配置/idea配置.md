@@ -119,8 +119,6 @@ idea.log.path=${idea.system.path}/log
 
 ![2020-09-05_094640](img/2020-09-05_094640.png)
 
-
-
 # 默认打开项目位置
 
 ![2020-10-27_142202](img/2020-10-27_142202.png)
@@ -159,6 +157,10 @@ idea.log.path=${idea.system.path}/log
 双击Shift搜索`show memory indicator`
 
 ![2021-12-23_092846](img/2021-12-23_092846.png)
+
+# 取消嵌入提示
+
+![](img/2022-09-28_155301.png)
 
 # 插件
 
