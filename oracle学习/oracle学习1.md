@@ -966,8 +966,8 @@ SELECT NEXT_DAY(NEXT_DAY(SYSDATE,'星期二'),'星期二') FROM dual;
 
 ```sql
 SELECT TO_CHAR(SYSDATE,'yyyy-mm-dd') FROM dual;
-SELECT TO_DATE(SYSDATE,'yyyy-mm-dd hh:mi:ss') FROM dual;
-SELECT TO_NUMBER(SYSDATE,'yyyy-mm-dd hh24:mi:ss') FROM dual;
+SELECT TO_CHAR(SYSDATE,'yyyy-mm-dd hh:mi:ss') FROM dual;
+SELECT TO_CHAR(SYSDATE,'yyyy-mm-dd hh24:mi:ss') FROM dual;
 ```
 
 ![2019-07-15_152800](img/2019-07-15_152800.png)
