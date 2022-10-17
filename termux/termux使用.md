@@ -37,6 +37,8 @@ pkg install vim openssh curl wget ls tree root-repo x11-repo -y
 ```shell
 alias vi='vim'
 alias ll='ls -l'
+alias grep='grep --color=auto'
+alias ifconfig='ifconfig 2>/dev/null'
 ```
 
 编辑~/.bashrc文件
@@ -45,15 +47,19 @@ alias ll='ls -l'
 if [ -f ~/.alias ]; then
 	. ~/.alias
 fi
-
-echo "用户:"$(whoami)
+# 设置语系
+LANG=zh_CN.UTF-8
+LANGUAGE=zh_CN.UTF-8
+echo "欢迎: "$(whoami)
+echo "时间:" `date "+%Y-%m-%d %H:%M"`
+echo -e "IP  :\e[33m" `ifconfig|grep 'inet'|cut -d ' ' -f 10|grep -v '127.0.0.1'` "\e[0m"
 if pgrep -x "sshd" >/dev/null
 then
-	echo "sshd运行中..."
+	:
 else
 	sshd
-	echo "启动sshd"
 fi
+curl zh.wttr.in/上海?format=3
 ```
 
 重新加载.bashrc文件
