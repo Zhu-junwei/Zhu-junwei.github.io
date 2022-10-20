@@ -29,7 +29,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/termux/apt/termux-main stable main
 ## 安装常用软件
 
 ```shell
-pkg install vim openssh curl wget ls tree root-repo x11-repo -y
+pkg install vim openssh curl wget sl tree root-repo x11-repo -y
 ```
 
 ## 起别名
