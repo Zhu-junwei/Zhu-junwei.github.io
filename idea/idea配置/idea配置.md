@@ -144,10 +144,6 @@ idea.log.path=${idea.system.path}/log
 # 配置SSH
 ![](img/20220706_205445.png)
 
-# maven helper 解决依赖冲突
-
-![2020-11-12_184517](img/2020-11-12_184517.png)
-
 # 隐藏目录中为文件或目录
 
 ![20210726_003246](img/20210726_003246.png)
@@ -163,18 +159,6 @@ idea.log.path=${idea.system.path}/log
 ![](img/2022-09-28_155301.png)
 
 # 插件
-
-## 安装忽略文件插件
-
-![2020-11-12_100648](img/2020-11-12_100648.png)
-
-## 安装Lombok插件
-
-![2021-09-27_094401](img/2021-09-27_094401.png)
-
-## 安装阿里巴巴Java开发约束插件
-
-![2020-11-15_121335](img/2020-11-15_121335.png)
 
 ## 安装显示类注释插件(可选)
 
@@ -217,6 +201,13 @@ idea.log.path=${idea.system.path}/log
 ## Translation 插件
 
 > 直接在idea里面翻译英文不香吗
+
+## ignore插件
+
+## 主题插件
+
+- Xcode Dark theme
+- Visual Studio Code "Dark Plus" theme
 
 # 激活
 
