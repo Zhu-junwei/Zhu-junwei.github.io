@@ -6,13 +6,13 @@
 > ​        SC 是用来与服务控制管理器和服务进行通信
 > ​        的命令行程序。
 > 用法:
-> ​        sc <server> \[command][service name] <option1> <option2>...
+>         sc <server> [command][service name] <option1> <option2>...
 
 
 
 ## 启动服务
 
-```powershell
+```shell
 //启动mysql服务
 sc start mysql
 //启动clouddriveservice
@@ -50,7 +50,7 @@ sc config mysql start=delayed-auto
 > 描述:
 > ​        在注册表和服务数据库中创建服务项。
 > 用法:
-> ​        sc <server> create \[service name] [binPath= ] <option1> <option2>...
+> ​        sc <server> create [service name] [binPath= ] <option1> <option2>...
 
 ```powershell
 sc create clouddrive binPath=D:\CloudDrive\CloudDriveService.exe start=auto
@@ -62,7 +62,7 @@ sc create clouddrive binPath=D:\CloudDrive\CloudDriveService.exe start=auto
 > 描述:
 > ​        设置服务的描述字符串。
 > 用法:
-> ​        sc <server> description \[service name] [description]
+> ​        sc <server> description [service name] [description]
 
 ```powershell
 sc description clouddrive "这是我创建的第一个服务"
