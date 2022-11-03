@@ -86,9 +86,7 @@ idea.log.path=${idea.system.path}/log
 
 # 配置SQL代码样式
 
-> 设置关键字为大写
-
-![](img/2022-11-02_095349.png)
+![](img/20221102_221014.png)
 
 # 配置新建Java文件模板
 
