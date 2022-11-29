@@ -1,38 +1,37 @@
-# 第四章
+[toc]
 
-系统版本(登录信息)
+# locale
 
-```
-/etc/issue
-```
-
-命令太长可以使用`\`后在下一行输入
-
-命令区分大小写
-
-查看语系
-
-```
+```shell
+# 查看语系
 locale
+# 查询支持的语系
+locale -a
+
 ```
 
-修改语系
-
-```
+```shell
+# 修改语系
 LANG=en_US.utf8
+# 英语
 export LC_ALL=en_US.utf8
-或
-zh_CN.UTF-8
-export LC_ALL=zh_CN.UTF-8
+# 简体中文
+export LC_ALL=zh_CN.utf8
 ```
 
 日期
 
-```
+```shell
 date
+# 年-月-日
 date +%Y-%m-%d
-date +%H:%M
+date +%F
+# 时:分:秒
+date +%H:%M:%S
+date +%T
+# 年-月-日 时:分:秒
 date "+%Y-%m-%d %H:%M:%S"
+date +'%F %T'
 ```
 
 日历
