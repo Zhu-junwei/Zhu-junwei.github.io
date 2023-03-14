@@ -222,7 +222,7 @@ tar -zcf /sdcard/termux-backup.tar.gz -C /data/data/com.termux/files ./home ./us
 1. 确保有存储权限
 ```shell
 termux-setup-storage
-````
+```
 
 2. 恢复备份文件
 ```shell
