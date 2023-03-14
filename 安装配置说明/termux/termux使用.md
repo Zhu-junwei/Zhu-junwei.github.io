@@ -204,3 +204,43 @@ nh kex stop
 ## nethunter界面
 
 ![安装成功](img/20230305_164341.png)
+
+# 备份与恢复
+
+## 备份
+1. 确保有存储权限
+```shell
+termux-setup-storage
+```
+
+2. 备份文件
+```shell
+tar -zcf /sdcard/termux-backup.tar.gz -C /data/data/com.termux/files ./home ./usr
+```
+
+## 恢复
+1. 确保有存储权限
+```shell
+termux-setup-storage
+````
+
+2. 恢复备份文件
+```shell
+tar -zxf /sdcard/termux-backup.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
+```
+> 恢复后重启应用即可
+
+
+## 使用系统工具备份与恢复
+最新版本的有`termux-backup`和`termux-restore`命令提供备份与恢复操作，可参考官方文档。
+参考：https://wiki.termux.com/wiki/Backing_up_Termux
+
+```shell
+# 备份
+termux-backup /sdcard/backup.tar.xz
+# 恢复
+termux-restore /sdcard/backup.tar.xz
+```
+
+
+备份在重新安装termux时非常之有用！后悔之前不会备份~
