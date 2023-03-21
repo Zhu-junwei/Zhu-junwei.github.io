@@ -19,3 +19,12 @@ ALTER USER 用户名 PROFILE DEFAULT;
 ```sql
 SELECT * FROM v$version;
 ```
+
+# 备份与恢复
+
+备份某张表，如`QUOTE_VALUE`表
+
+```sql
+expdp SYSTEM/calypso DIRECTORY=DB_DUMP DUMPFILE=${MAIN_SCHEMA}_QUOTE_VALUE_`(date +%Y%m%d%H%M%S)`.dmp SCHEMAS=${MAIN_SCHEMA} INCLUDE=TABLE:"IN('QUOTE_VALUE')" LOGFILE=${MAIN_SCHEMA}_QUOTE_VALUE_`(date +%Y%m%d%H%M%S)`_export.log LOGTIME=ALL
+```
+
