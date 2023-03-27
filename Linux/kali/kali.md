@@ -1,7 +1,5 @@
 [TOC]
 
-
-
 # 下载
 
 # 官网下载
@@ -49,8 +47,6 @@ deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-
 apt-get update && apt-get upgrade && apt-get dist-upgrade
 ```
 
-
-
 ## sshd设置
 
 ```shell
@@ -87,11 +83,9 @@ update-rc.d ssh enable
 update-rc.d ssh disable
 ```
 
-
-
 # 常用命令
 
-##  dpkg
+## dpkg
 
 > dpkg是一个Debian的一个命令行工具，它可以用来安装、删除、构建和管理Debian的软件包。
 
@@ -134,10 +128,11 @@ sudo gdebi sogoupinyin.deb --选择y即可
 
 对于Web渗透测试而言、针对目标系统所相关的信息
 
+
 | 框架     | 开发人员                                  | 安全人员                                                  |
 | -------- | ----------------------------------------- | --------------------------------------------------------- |
 | 前端     | HTML/CSS/JS......                         | 指纹识别<br />GITHUB/源代码泄露<br />敏感文件及地址<br /> |
-| 后端     | PHP/ASP.NET/容器/数据库……                 | 框架识别<br />容器识别                                    |
+| 后端     | PHP/ASP.NET/容器/数据库……               | 框架识别<br />容器识别                                    |
 | 中间件   | 就是中间件                                | 组件报错                                                  |
 | 系统     | windows server<br />linux<br />mac server | 端口<br />系统识别                                        |
 | 网络架构 | osi模型                                   | 域名<br />Whois<br />CDN<br />c段                         |
@@ -149,8 +144,6 @@ site:qq.com
 intitle:"QQ飞车"
 intext:"活动"
 ```
-
-
 
 ```
 --网络摄像头
@@ -206,13 +199,6 @@ github
 
 ## 端口扫描-NMAP
 
-
-
 ## 子域名&&目录扫描
 
-
-
 ## 指纹识别-云悉
-
-
-
