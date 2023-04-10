@@ -142,7 +142,7 @@ service nmb status
 echo
 lsof -iTCP -sTCP:LISTEN -n -P | grep smbd
 ```
-> 新建samba_status.sh文件，将上述命令复制导文件内，报错后退出。赋予文件可执行权限`chmod 755 samba_status.sh`，后续可以直接通过该脚本查看samba服务的状态。
+> 新建samba_status.sh文件，将上述命令复制到文件内，保存后退出。赋予文件可执行权限`chmod 755 samba_status.sh`，后续可以直接通过该脚本查看samba服务的状态。
 
 
 # linux挂载、卸载
