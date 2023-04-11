@@ -20,6 +20,30 @@ ALTER USER 用户名 PROFILE DEFAULT;
 SELECT * FROM v$version;
 ```
 
+查表空间的大小和空闲空间
+```sql
+SELECT "SPACE".TABLESPACE_NAME, GB, "FREE(GB)" FROM
+    (SELECT TABLESPACE_NAME, ROUND(SUM(NVL(BYTES,0))/(1024*1024*1024), 2) AS GB FROM DBA_DATA_FILES GROUP BY TABLESPACE_NAME) "SPACE",
+    (SELECT TABLESPACE_NAME, ROUND(SUM(NVL(BYTES/1024/1024/1024, 0)), 2) AS "FREE(GB)" FROM DBA_FREE_SPACE GROUP BY TABLESPACE_NAME) FREE
+WHERE "SPACE".TABLESPACE_NAME = FREE.TABLESPACE_NAME
+ORDER BY 1;
+```
+
+查看表空间位置
+```sql
+col file_name for a60;
+set linesize 160;
+select file_name,tablespace_name,bytes from dba_data_files;
+```
+
+增加表空间大小
+```sql
+-- 创建02表空间
+ALTER TABLESPACE SYSAUX ADD DATAFILE
+'/ora12cdata/dbf/sysaux02.dbf' SIZE 5G
+AUTOEXTEND ON NEXT 1G MAXSIZE 10G;
+```
+
 # 备份与恢复
 
 备份某张表，如`QUOTE_VALUE`表
