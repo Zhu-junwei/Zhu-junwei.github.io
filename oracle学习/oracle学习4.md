@@ -1,3 +1,12 @@
+# 在命令行中直接直接sql语句
+```sql
+sqlplus / as sysdba <<EOF
+-- 注释的地方写需要执行的sql语句
+EXIT;
+EOF
+    
+```
+
 # 系统配置
 
 查看系统的密码规则
@@ -20,6 +29,8 @@ ALTER USER 用户名 PROFILE DEFAULT;
 SELECT * FROM v$version;
 ```
 
+# 表空间
+
 查表空间的大小和空闲空间
 ```sql
 SELECT "SPACE".TABLESPACE_NAME, GB, "FREE(GB)" FROM
@@ -35,10 +46,13 @@ col file_name for a60;
 set linesize 160;
 select file_name,tablespace_name,bytes from dba_data_files;
 ```
+> 1、dbf文件与tablespase的关系：一个tablespase由多个dbf文件组成，一个dbf文件只能属于一个tablespase
+> 
+> 2、dbf文件如果占满了就无法写入新数据，无法自动扩展，相关的应用就会报错
 
 增加表空间大小
 ```sql
--- 创建02表空间
+-- 用于向Oracle数据库中的 SYSAUX 表空间添加一个数据文件，并设置其初始大小为 5G，自动扩展，下一个扩展为 1G，最大为 10G。
 ALTER TABLESPACE SYSAUX ADD DATAFILE
 '/ora12cdata/dbf/sysaux02.dbf' SIZE 5G
 AUTOEXTEND ON NEXT 1G MAXSIZE 10G;
