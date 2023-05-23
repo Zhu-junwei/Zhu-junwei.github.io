@@ -1,6 +1,7 @@
 [TOC]
 
 # SC
+
 ```
 描述:
         SC 是用来与服务控制管理器和服务进行通信
@@ -52,7 +53,7 @@
           GetDisplayName--获取服务的 DisplayName。
           GetKeyName------获取服务的 ServiceKeyName。
           EnumDepend------枚举服务依赖关系。
-          
+        
         以下命令不需要服务名称:
         sc <server> <command> <option>
           boot------------(ok | bad)指示是否应将上一次启动另存为
@@ -92,7 +93,6 @@ sc queryex group= ""    - 枚举不在组内的活动服务
 sc query type= interact - 枚举所有不活动服务
 sc query type= driver group= NDIS     - 枚举所有 NDIS 驱动程序
 ```
-
 
 ## 启动服务
 
@@ -136,6 +136,7 @@ sc config mysql start=delayed-auto
 > 用法:
 > sc <server> create [service name] [binPath= ] <option1> <option2>...
 
+
 ```powershell
 sc create clouddrive binPath=D:\CloudDrive\CloudDriveService.exe start=auto
 ```
@@ -147,6 +148,7 @@ sc create clouddrive binPath=D:\CloudDrive\CloudDriveService.exe start=auto
 > 设置服务的描述字符串。
 > 用法:
 > sc <server> description [service name] [description]
+
 
 ```powershell
 sc description clouddrive "这是我创建的第一个服务"
@@ -163,6 +165,7 @@ sc description clouddrive "这是我创建的第一个服务"
 > 用法:
 > sc <server> delete [service name]
 
+
 ```powershell
 sc delete clouddrive
 ```
@@ -170,3 +173,19 @@ sc delete clouddrive
 ## 参考资料
 
 [SC命令详解 - 森大科技 - 博客园](https://www.cnblogs.com/cnsend/p/12907229.html)
+
+
+# 查看端口占用
+
+```bash
+netstat -ano | findstr <端口号>
+```
+
+# 杀死进程
+
+```bash
+# 使用 taskkill 命令加上进程ID来终止进程。
+taskkill /PID <进程ID>
+# 如果需要强制终止进程，可以添加 /F 参数
+taskkill /F /PID <进程ID>
+```
