@@ -668,7 +668,7 @@ INSERT INTO myemp
 VALUES(9999,'李四','清洁工',7369,TO_DATE('1979-11-11','yyyy-mm-dd'),9000.0,10,40);
 ```
 
-## 13.3 数据2修改
+## 13.3 数据修改
 
 格式 
 
@@ -678,6 +678,18 @@ VALUES(9999,'李四','清洁工',7369,TO_DATE('1979-11-11','yyyy-mm-dd'),9000.0,
 
 ```sql
 UPDATE myemp SET sal=8000,comm=9000 WHERE ename='SMITH';
+```
+
+**MERGE INTO**
+
+> 高阶更新用法
+
+```sql
+MERGE INTO xx t1
+USING xxx t2
+ON ( t1.yy = t2.yyy )
+WHEN MATCHED THEN
+UPDAE SET t1.xx = t2.xxx, t1.zz = t2.zzz;
 ```
 
 ## 13.4 数据删除
