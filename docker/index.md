@@ -1,110 +1,110 @@
-# Docker Ğ¶ÔØ
+# Docker å¸è½½
 
-Í£Ö¹²¢É¾³ıËùÓĞÔËĞĞÖĞµÄÈİÆ÷
+åœæ­¢å¹¶åˆ é™¤æ‰€æœ‰è¿è¡Œä¸­çš„å®¹å™¨
 ```bash
 sudo docker stop $(sudo docker ps -a -q)
 sudo docker rm $(sudo docker ps -a -q)
 ```
 
-É¾³ıËùÓĞ¾µÏñ
+åˆ é™¤æ‰€æœ‰é•œåƒ
 ```bash
 sudo docker rmi $(sudo docker images -q)
 ```
 
-½ûÓÃdockerµÄ¿ª»ú×ÔÆô
+ç¦ç”¨dockerçš„å¼€æœºè‡ªå¯
 
-> Èç¹ûÉèÖÃÁË¿ª»ú×ÔÆô
+> å¦‚æœè®¾ç½®äº†å¼€æœºè‡ªå¯
 ```bash
 sudo systemctl disable docker
 ```
-> ¿ÉÒÔÍ¨¹ı`systemctl status docker`ÃüÁî²é¿´ÊÇ·ñ¿ªÆôÁËdockerµÄ×ÔÆô¶¯¡£Èç¹ûloadedÊÇenabled´ú±íÊÇ¿ª»ú×ÔÆô£¬·ñÔòÃ»ÓĞÉèÖÃ¿ªÆô×ÔÆô¡£
+> å¯ä»¥é€šè¿‡`systemctl status docker`å‘½ä»¤æŸ¥çœ‹æ˜¯å¦å¼€å¯äº†dockerçš„è‡ªå¯åŠ¨ã€‚å¦‚æœloadedæ˜¯enabledä»£è¡¨æ˜¯å¼€æœºè‡ªå¯ï¼Œå¦åˆ™æ²¡æœ‰è®¾ç½®å¼€å¯è‡ªå¯ã€‚
 
-Í£Ö¹Docker·şÎñ
+åœæ­¢DockeræœåŠ¡
 ```bash
-# ¹Ø±Õdocker.socket
+# å…³é—­docker.socket
 sudo systemctl stop docker.socket
-# ¹Ø±Õdocker
+# å…³é—­docker
 sudo systemctl stop docker
 ```
 
-Ğ¶ÔØDockerÈí¼ş°ü
+å¸è½½Dockerè½¯ä»¶åŒ…
 ```bash
 sudo yum remove docker-ce docker-ce-cli containerd.io -y
 ```
 
-É¾³ıDockerÊı¾İºÍÅäÖÃ
+åˆ é™¤Dockeræ•°æ®å’Œé…ç½®
 ```bash
 sudo rm -rf /var/lib/docker
 ```
 
-É¾³ıDocker´æ´¢¿â
+åˆ é™¤Dockerå­˜å‚¨åº“
 ```bash
 sudo yum remove docker-ce docker-ce-cli containerd.io \
                     docker-buildx-plugin.x86_64 \
                     docker-compose-plugin.x86_64 -y
 ```
 
-ÇåÀíyum»º´æ
+æ¸…ç†yumç¼“å­˜
 ```bash
 sudo yum clean all
 ```
 
-¼ì²é²¢É¾³ı¿ÉÄÜ´æÔÚµÄÆäËûDocker×é¼ş
+æ£€æŸ¥å¹¶åˆ é™¤å¯èƒ½å­˜åœ¨çš„å…¶ä»–Dockerç»„ä»¶
 ```bash
 sudo yum list installed | grep docker
 ```
-Èç¹ûÓĞµÄ»°Ê¹ÓÃÈçÏÂÃüÁî½øĞĞÉ¾³ı
+å¦‚æœæœ‰çš„è¯ä½¿ç”¨å¦‚ä¸‹å‘½ä»¤è¿›è¡Œåˆ é™¤
 ```bash
 sudo yum remove xxx
 ```
 
 
-# Docker°²×°
+# Dockerå®‰è£…
 
-°²×°ÒÀÀµ°ü
+å®‰è£…ä¾èµ–åŒ…
 ```bash
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
-Ìí¼ÓDocker´æ´¢¿â
+æ·»åŠ Dockerå­˜å‚¨åº“
 
-> ¶şÑ¡Ò»
+> äºŒé€‰ä¸€
 ```bash
-# docker¹ÙÍø
+# dockerå®˜ç½‘
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
-# °¢ÀïÔÆ
+# é˜¿é‡Œäº‘
 sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
 
-°²×°DockerÒıÇæ
+å®‰è£…Dockerå¼•æ“
 ```bash
 sudo yum install docker-ce docker-ce-cli containerd.io -y
 ```
 
-Æô¶¯Docker·şÎñ
+å¯åŠ¨DockeræœåŠ¡
 ```bash
 sudo systemctl start docker
 ```
 
-ÉèÖÃDocker·şÎñËæÏµÍ³Æô¶¯
+è®¾ç½®DockeræœåŠ¡éšç³»ç»Ÿå¯åŠ¨
 ```bash
 sudo systemctl enable docker
 ```
 
-ÑéÖ¤°²×°
+éªŒè¯å®‰è£…
 ```bash
 sudo docker --version
 ```
 
-ÏÔÊ¾½á¹û
+æ˜¾ç¤ºç»“æœ
 ```
 [root@Redis ~]# sudo docker --version
 Docker version 24.0.7, build afdd53b
 ```
 
-£¨¿ÉÑ¡£©½«ÓÃ»§Ìí¼Óµ½docker×é£¨±ÜÃâÊ¹ÓÃsudo£©
+ï¼ˆå¯é€‰ï¼‰å°†ç”¨æˆ·æ·»åŠ åˆ°dockerç»„ï¼ˆé¿å…ä½¿ç”¨sudoï¼‰
 ```bash
 sudo usermod -aG docker your_username
 ```
-Çë½«your_usernameÌæ»»ÎªÄãµÄÊµ¼ÊÓÃ»§Ãû¡£È»ºó£¬×¢Ïú²¢ÖØĞÂµÇÂ¼ÒÔÓ¦ÓÃ¸ü¸Ä¡£
+è¯·å°†your_usernameæ›¿æ¢ä¸ºä½ çš„å®é™…ç”¨æˆ·åã€‚ç„¶åï¼Œæ³¨é”€å¹¶é‡æ–°ç™»å½•ä»¥åº”ç”¨æ›´æ”¹ã€‚

@@ -12,7 +12,7 @@ public boolean equals(Object obj) {
 现在我们有一个Student类
 ```java
 public class Student  {
-	private String name ;
+	private String nam e ;
 	private int age;
 	public Student(String name, int age) {
 		this.name = name;

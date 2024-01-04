@@ -1,4 +1,4 @@
-ArrayList类的contains方法 
+       ArrayList类的contains方法 
 
 > 如果此 collection 包含指定的元素，则返回 `true`。
 
