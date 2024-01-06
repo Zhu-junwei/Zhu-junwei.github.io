@@ -157,3 +157,16 @@ mvn install:install-file -DgroupId=com.alibaba -DartifactId=fastjson -Dversion=1
 //进入jar包目录后安装
 mvn install:install-file -DgroupId=com.alibaba -DartifactId=fastjson -Dversion=1.2.60 -Dfile=fastjson-1.2.60.jar -Dpackaging=jar
 ```
+
+# 打包时不包含指定目录
+> 在pom.xml中添加如下配置，打包的使用会排除`/src/main/resources`目录
+```xml
+<build>
+    <resources>
+        <resource>
+            <directory>/src/main/resources</directory>
+            <filtering>true</filtering>
+        </resource>
+    </resources>
+</build>
+```
