@@ -1,6 +1,6 @@
 [toc]
 
-# locale
+# locale 
 
 ```shell
 # 查看语系
@@ -13,13 +13,14 @@ locale -a
 ```shell
 # 修改语系
 LANG=en_US.utf8
-# 英语
+# 设置所有语言环境 英文
 export LC_ALL=en_US.utf8
-# 简体中文
+# 设置所有语言环境 中文
 export LC_ALL=zh_CN.utf8
 ```
+> 系统永久生效可以修改`/etc/locale.conf`文件
 
-日期
+# date 日期
 
 ```shell
 date
@@ -34,7 +35,7 @@ date "+%Y-%m-%d %H:%M:%S"
 date +'%F %T'
 ```
 
-日历
+# cal 日历
 
 ```
 cal [month] [year]
@@ -43,7 +44,7 @@ cal 2020
 cal 3 2020
 ```
 
-计算器
+# bc 计算器
 
 ```
 bc
@@ -74,7 +75,7 @@ scale=3
 date --help
 ```
 
-man page
+# man page
 
 ```
 man date
@@ -125,27 +126,30 @@ man 7 man
 
 关键词查找
 
-```
+```shell
 #查找含有man关键词的说明文件
 man -k man
+
 apropos man
 ```
 
 `man -f man` = `whatis man`
+
 `man -k man` = `apropos man`
+
 使用上述两个命令的时候必须要建立whatis数据库
 
-```
+```shell
 mandb
 ```
 
 
 
-info page
+# info page
 
 info指令的文件存放位置
 
-```
+```shell
 /usr/share/info/
 ```
 
@@ -165,7 +169,7 @@ info gcc
 
  
 
-正确关机
+# 正确关机
 
 - 观察系统使用状态
 
@@ -197,7 +201,7 @@ info gcc
 
 
 
-关机
+# shutdown
 
 ```
 #shutdown [-krhc] [时间] [警告讯息]
@@ -222,10 +226,7 @@ info gcc
 #systemctl poweroff
 ```
 
-# 第6章
-
-## touch
-查看文件时间
+# 查看文件时间
 ```shell
 #查看文件的时间
 #mtime 默认文件内容修改时间 ll bashrc
@@ -241,13 +242,80 @@ stat bashrc
 ```
 ![](./img/20211225_002055.png)
 
+# touch 
+
 ```shell
 touch -t 201908161846.33 bashrc
 stat bashrc
 ```
 ![](./img/20211225_002219.png)
 
+# yum
 
+`yum` 是用于在基于 RPM（Red Hat Package Manager）的 Linux 发行版上管理软件包的包管理器。以下是一些常用的 yum 命令：
 
+安装软件包
+```bash
+yum install package_name
+```
 
+更新软件包
+> 用于更新系统上已安装的所有软件包，包括操作系统的核心组件和其他已安装的软件包。
+```bash
+yum update
+```
 
+升级特定软件包
+```bash
+yum update package_name
+```
+
+查找软件包信息
+```bash
+yum info package_name
+```
+
+列出所有已安装的软件包
+```bash
+yum list installed
+```
+
+搜索可用软件包
+```bash
+yum search keyword
+```
+
+删除软件包
+```bash
+yum remove package_name
+```
+
+清理缓存
+```bash
+yum clean all
+```
+
+显示软件包组信息
+```bash
+yum grouplist
+```
+
+安装软件包组
+```bash
+yum groupinstall group_name
+```
+
+删除软件包组
+```bash
+yum groupremove group_name
+```
+
+检查可用更新
+```bash
+yum check-update
+```
+
+查看软件包提供哪些文件
+```bash
+yum provides file_path
+```

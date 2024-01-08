@@ -1,4 +1,6 @@
-# Docker 卸载
+# Docker安装与卸载
+
+## Docker 卸载
 
 停止并删除所有运行中的容器
 ```bash
@@ -59,7 +61,7 @@ sudo yum remove xxx
 ```
 
 
-# Docker安装
+## Docker安装
 
 安装依赖包
 ```bash
