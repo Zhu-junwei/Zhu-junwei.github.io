@@ -1,6 +1,6 @@
-# ÃÜÂë²ßÂÔ
+# å¯†ç ç­–ç•¥
 
-²é¿´Ä¬ÈÏµÄÃÜÂë²ßÂÔÉèÖÃ
+æŸ¥çœ‹é»˜è®¤çš„å¯†ç ç­–ç•¥è®¾ç½®
 ```mysql
 show variables like 'validate_password%';
 ```
@@ -20,26 +20,26 @@ show variables like 'validate_password%';
 8 rows in set (0.00 sec)
 ```
 
-Ä¬ÈÏ£º
-- `length`ÃÜÂëµÄ×îĞ¡³¤¶È¡£ÔÚÕâÀï£¬ËüµÄÖµÎª 8¡£
-- `mixed_case_count`±íÊ¾ÃÜÂëÖĞ±ØĞë°üº¬µÄ²»Í¬´óĞ¡Ğ´×ÖÄ¸µÄÊıÁ¿¡£ÔÚÕâÀï£¬ËüµÄÖµÎª 1¡£
-- `number_count`±íÊ¾ÃÜÂëÖĞ±ØĞë°üº¬µÄÊı×ÖµÄÊıÁ¿¡£ÔÚÕâÀï£¬ËüµÄÖµÎª 1¡£
-- `special_char_count`±íÊ¾ÃÜÂëÖĞ±ØĞë°üº¬µÄÌØÊâ×Ö·ûµÄÊıÁ¿¡£ÔÚÕâÀï£¬ËüµÄÖµÎª 1¡£
-- `policy`¶¨ÒåÁËÃÜÂëÇ¿¶ÈµÄ²ßÂÔ¡£ÔÚÕâÀï£¬ËüµÄÖµÎª MEDIUM£¬±íÊ¾ÖĞµÈÇ¿¶ÈµÄÃÜÂë²ßÂÔ¡£
+é»˜è®¤ï¼š
+- `length`å¯†ç çš„æœ€å°é•¿åº¦ã€‚åœ¨è¿™é‡Œï¼Œå®ƒçš„å€¼ä¸º 8ã€‚
+- `mixed_case_count`è¡¨ç¤ºå¯†ç ä¸­å¿…é¡»åŒ…å«çš„ä¸åŒå¤§å°å†™å­—æ¯çš„æ•°é‡ã€‚åœ¨è¿™é‡Œï¼Œå®ƒçš„å€¼ä¸º 1ã€‚
+- `number_count`è¡¨ç¤ºå¯†ç ä¸­å¿…é¡»åŒ…å«çš„æ•°å­—çš„æ•°é‡ã€‚åœ¨è¿™é‡Œï¼Œå®ƒçš„å€¼ä¸º 1ã€‚
+- `special_char_count`è¡¨ç¤ºå¯†ç ä¸­å¿…é¡»åŒ…å«çš„ç‰¹æ®Šå­—ç¬¦çš„æ•°é‡ã€‚åœ¨è¿™é‡Œï¼Œå®ƒçš„å€¼ä¸º 1ã€‚
+- `policy`å®šä¹‰äº†å¯†ç å¼ºåº¦çš„ç­–ç•¥ã€‚åœ¨è¿™é‡Œï¼Œå®ƒçš„å€¼ä¸º MEDIUMï¼Œè¡¨ç¤ºä¸­ç­‰å¼ºåº¦çš„å¯†ç ç­–ç•¥ã€‚
 
-¸ü¸ÄÄ¬ÈÏÉèÖÃ
+æ›´æ”¹é»˜è®¤è®¾ç½®
 ```mysql
 SET GLOBAL validate_password.length = 6;
 SET GLOBAL validate_password.mixed_case_count = 0;
 SET GLOBAL validate_password.number_count = 0;
 SET GLOBAL validate_password.special_char_count = 0;
 ```
-Ò²¿ÉÒÔÉèÖÃÃÜÂëµÄÇ¿¶È²ßÂÔ
+ä¹Ÿå¯ä»¥è®¾ç½®å¯†ç çš„å¼ºåº¦ç­–ç•¥
 ```mysql
 SET GLOBAL validate_password.length = 4;
 SET GLOBAL validate_password.policy=LOW;
 ```
 
-²Î¿¼£º
+å‚è€ƒï¼š
 
 https://stackoverflow.com/questions/43094726/your-password-does-not-satisfy-the-current-policy-requirements

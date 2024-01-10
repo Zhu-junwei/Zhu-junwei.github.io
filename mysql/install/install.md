@@ -1,51 +1,51 @@
-# °²×°
+# å®‰è£…
 
-±¾½Ì³Ì»·¾³ÎªCentOS7£¬°²×°MySQL8.0.23È·±£ÏµÍ³¿ÉÒÔÁ¬½Ó»¥ÁªÍø¡£
+æœ¬æ•™ç¨‹ç¯å¢ƒä¸ºCentOS7ï¼Œå®‰è£…MySQL8.0.23ç¡®ä¿ç³»ç»Ÿå¯ä»¥è¿æ¥äº’è”ç½‘ã€‚
 
-Ê×ÏÈÈ·¶¨ÏµÍ³µÄ[mysqlÒÑ¾­Ğ¶ÔØ¸É¾»](../uninstall/uninstall.md)¡£
+é¦–å…ˆç¡®å®šç³»ç»Ÿçš„[mysqlå·²ç»å¸è½½å¹²å‡€](../uninstall/uninstall.md)ã€‚
 
-1. ÏÂÔØ°²×° MySQL Yum ²Ö¿â
+1. ä¸‹è½½å®‰è£… MySQL Yum ä»“åº“
 ```bash
 wget https://repo.mysql.com/mysql80-community-release-el7-11.noarch.rpm
 yum localinstall mysql80-community-release-el7-11.noarch.rpm
 ```
 
-2. °²×° MySQL 8 ÉçÇø·şÎñÆ÷
+2. å®‰è£… MySQL 8 ç¤¾åŒºæœåŠ¡å™¨
 
 ```bash
 yum install mysql-community-server -y
 ```
 
-3. Æô¶¯ MySQL ·şÎñ
+3. å¯åŠ¨ MySQL æœåŠ¡
 ```bash
 systemctl start mysqld
 ```
-4. ÏÔÊ¾ root ÓÃ»§µÄÄ¬ÈÏÃÜÂë
+4. æ˜¾ç¤º root ç”¨æˆ·çš„é»˜è®¤å¯†ç 
 
-> °²×° MySQL 8.0 Ê±£¬»á×Ô¶¯Îª root ÓÃ»§Éú³ÉÒ»¸öÁÙÊ±ÃÜÂë£¬²¢¼ÇÂ¼ÔÚÈÕÖ¾ÎÄ¼şÀï¡£ÇëÊ¹ÓÃÒÔÏÂÃüÁî²é¿´ root ÓÃ»§µÄÁÙÊ±ÃÜÂë£º
+> å®‰è£… MySQL 8.0 æ—¶ï¼Œä¼šè‡ªåŠ¨ä¸º root ç”¨æˆ·ç”Ÿæˆä¸€ä¸ªä¸´æ—¶å¯†ç ï¼Œå¹¶è®°å½•åœ¨æ—¥å¿—æ–‡ä»¶é‡Œã€‚è¯·ä½¿ç”¨ä»¥ä¸‹å‘½ä»¤æŸ¥çœ‹ root ç”¨æˆ·çš„ä¸´æ—¶å¯†ç ï¼š
 
 ```bash
 grep "A temporary password" /var/log/mysqld.log
 ```
-ÕâÊÇÊä³ö£º
+è¿™æ˜¯è¾“å‡ºï¼š
 
 ```bash
 [Note] A temporary password is generated for root@localhost: Liaka*(Dka&^Kjs
 ```
-Çë×¢Òâ£¬Äú±¾µØµÄÁÙÊ±ÃÜÂëÊÇ²»Í¬µÄ¡£ÄúÒª¸ù¾İ´ËÃÜÂëÀ´¸ü¸Ä root ÓÃ»§µÄÃÜÂë¡£
+è¯·æ³¨æ„ï¼Œæ‚¨æœ¬åœ°çš„ä¸´æ—¶å¯†ç æ˜¯ä¸åŒçš„ã€‚æ‚¨è¦æ ¹æ®æ­¤å¯†ç æ¥æ›´æ”¹ root ç”¨æˆ·çš„å¯†ç ã€‚
 
-5. MySQL °²È«ÅäÖÃ
+5. MySQL å®‰å…¨é…ç½®
 
-Ö´ĞĞÒÔÏÂ `mysql_secure_installation` ÃüÁîÀ´±£»¤ MySQL ·şÎñÆ÷£º
+æ‰§è¡Œä»¥ä¸‹ `mysql_secure_installation` å‘½ä»¤æ¥ä¿æŠ¤ MySQL æœåŠ¡å™¨ï¼š
 
 ```bash
 mysql_secure_installation
 ```
-Ëü»áÌáÊ¾ÄúÊäÈë root ÕÊ»§µÄµ±Ç°ÃÜÂë£º
+å®ƒä¼šæç¤ºæ‚¨è¾“å…¥ root å¸æˆ·çš„å½“å‰å¯†ç ï¼š
 ```bash
 Enter password for user root:
 ```
-ÊäÈëÉÏÃæµÄÁÙÊ±ÃÜÂë£¬È»ºó°´ÏÂ»Ø³µ¼ü¡£½«ÏÔÊ¾ÒÔÏÂÏûÏ¢£º
+è¾“å…¥ä¸Šé¢çš„ä¸´æ—¶å¯†ç ï¼Œç„¶åæŒ‰ä¸‹å›è½¦é”®ã€‚å°†æ˜¾ç¤ºä»¥ä¸‹æ¶ˆæ¯ï¼š
 
 ```bash
 The existing password for the user account root has expired. Please set a new password.
@@ -53,63 +53,63 @@ The existing password for the user account root has expired. Please set a new pa
 New password:
 Re-enter new password:
 ```
-ÇëÊäÈë root ÓÃ»§µÄĞÂÃÜÂëºÍÈ·ÈÏÃÜÂë¡£
+è¯·è¾“å…¥ root ç”¨æˆ·çš„æ–°å¯†ç å’Œç¡®è®¤å¯†ç ã€‚
 
-ÅäÖÃ¹ı³ÌÖĞËü»áÌáÊ¾ÅäÖÃÒ»Ğ©°²È«Ñ¡Ïî£¬ÎªÁË·şÎñÆ÷µÄ°²È«£¬Ó¦¸ÃÑ¡Ôñ y¡£ÕâĞ©ÎÊÌâ°üÀ¨£º
+é…ç½®è¿‡ç¨‹ä¸­å®ƒä¼šæç¤ºé…ç½®ä¸€äº›å®‰å…¨é€‰é¡¹ï¼Œä¸ºäº†æœåŠ¡å™¨çš„å®‰å…¨ï¼Œåº”è¯¥é€‰æ‹© yã€‚è¿™äº›é—®é¢˜åŒ…æ‹¬ï¼š
 
 Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
 
-É¾³ıÄäÃûÓÃ»§£¿£¨°´ y|Y ±íÊ¾ÊÇ£¬ÈÎºÎÆäËû¼ü±íÊ¾·ñ£©£ºy
+åˆ é™¤åŒ¿åç”¨æˆ·ï¼Ÿï¼ˆæŒ‰ y|Y è¡¨ç¤ºæ˜¯ï¼Œä»»ä½•å…¶ä»–é”®è¡¨ç¤ºå¦ï¼‰ï¼šy
 
 Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
 
-½ûÖ¹Ô¶³Ì root µÇÂ¼£¿£¨°´ y|Y ±íÊ¾ÊÇ£¬ÈÎºÎÆäËû¼ü±íÊ¾·ñ£©£ºy
+ç¦æ­¢è¿œç¨‹ root ç™»å½•ï¼Ÿï¼ˆæŒ‰ y|Y è¡¨ç¤ºæ˜¯ï¼Œä»»ä½•å…¶ä»–é”®è¡¨ç¤ºå¦ï¼‰ï¼šy
 
 Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
 
-É¾³ı²âÊÔÊı¾İ¿â²¢·ÃÎÊËü£¿£¨°´ y|Y ±íÊ¾ÊÇ£¬ÈÎºÎÆäËû¼ü±íÊ¾·ñ£©£ºy
+åˆ é™¤æµ‹è¯•æ•°æ®åº“å¹¶è®¿é—®å®ƒï¼Ÿï¼ˆæŒ‰ y|Y è¡¨ç¤ºæ˜¯ï¼Œä»»ä½•å…¶ä»–é”®è¡¨ç¤ºå¦ï¼‰ï¼šy
 
 Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
 
-ÏÖÔÚÖØĞÂ¼ÓÔØÈ¨ÏŞ±í£¿£¨°´ y|Y ±íÊ¾ÊÇ£¬ÈÎºÎÆäËû¼ü±íÊ¾·ñ£©£ºy
+ç°åœ¨é‡æ–°åŠ è½½æƒé™è¡¨ï¼Ÿï¼ˆæŒ‰ y|Y è¡¨ç¤ºæ˜¯ï¼Œä»»ä½•å…¶ä»–é”®è¡¨ç¤ºå¦ï¼‰ï¼šy
 
-6. MySQL ·şÎñ¿ØÖÆÃüÁî
+6. MySQL æœåŠ¡æ§åˆ¶å‘½ä»¤
 
-°²×°Íê³Éºó£¬MySQL ·şÎñ¾Í»á×Ô¶¯Æô¶¯¡£ÎÒÃÇ¿ÉÒÔÍ¨¹ıÒÔÏÂ¼¸¸öÃüÁî²é¿´ MySQL ·şÎñµÄ×´Ì¬£¬Æô¶¯¡¢Í£Ö¹¡¢ÖØÆô MySQL ·şÎñÆ÷£º
+å®‰è£…å®Œæˆåï¼ŒMySQL æœåŠ¡å°±ä¼šè‡ªåŠ¨å¯åŠ¨ã€‚æˆ‘ä»¬å¯ä»¥é€šè¿‡ä»¥ä¸‹å‡ ä¸ªå‘½ä»¤æŸ¥çœ‹ MySQL æœåŠ¡çš„çŠ¶æ€ï¼Œå¯åŠ¨ã€åœæ­¢ã€é‡å¯ MySQL æœåŠ¡å™¨ï¼š
 
-CentOS 8 »ò CentOS 7
+CentOS 8 æˆ– CentOS 7
 
-²é¿´ MySQL ·şÎñÆ÷×´Ì¬£º `systemctl status mysqld`
+æŸ¥çœ‹ MySQL æœåŠ¡å™¨çŠ¶æ€ï¼š `systemctl status mysqld`
 
-Æô¶¯ MySQL ·şÎñÆ÷£º `systemctl start mysqld`
+å¯åŠ¨ MySQL æœåŠ¡å™¨ï¼š `systemctl start mysqld`
 
-Í£Ö¹ MySQL ·şÎñÆ÷£º `systemctl stop mysqld`
+åœæ­¢ MySQL æœåŠ¡å™¨ï¼š `systemctl stop mysqld`
 
-ÖØÆô MySQL ·şÎñÆ÷£º `systemctl restart mysqld`
+é‡å¯ MySQL æœåŠ¡å™¨ï¼š `systemctl restart mysqld`
 
-ÅäÖÃ MySQL ·şÎñÆ÷×ÔÆô¶¯£º `systemctl enable mysqld`
+é…ç½® MySQL æœåŠ¡å™¨è‡ªå¯åŠ¨ï¼š `systemctl enable mysqld`
 
-7. Á¬½Óµ½ MySQL ·şÎñÆ÷
+7. è¿æ¥åˆ° MySQL æœåŠ¡å™¨
 
-ÇëÊ¹ÓÃÒÔÏÂÃüÁîÁ¬½Óµ½ MySQL ·şÎñÆ÷£º
+è¯·ä½¿ç”¨ä»¥ä¸‹å‘½ä»¤è¿æ¥åˆ° MySQL æœåŠ¡å™¨ï¼š
 
 ```bash
 mysql -u root -p
 ```
 
-È»ºó¸ù¾İÌáÊ¾ÊäÈë root ÕÊ»§µÄÃÜÂë£¬²¢°´ Enter ¼ü¡£ÑéÖ¤Í¨¹ıºó£¬½«ÏÔÊ¾ÒÔÏÂÊä³ö´ú±í½øÈëÁË MySQL ¿ØÖÆÌ¨£º
+ç„¶åæ ¹æ®æç¤ºè¾“å…¥ root å¸æˆ·çš„å¯†ç ï¼Œå¹¶æŒ‰ Enter é”®ã€‚éªŒè¯é€šè¿‡åï¼Œå°†æ˜¾ç¤ºä»¥ä¸‹è¾“å‡ºä»£è¡¨è¿›å…¥äº† MySQL æ§åˆ¶å°ï¼š
 
 ```bash
 mysql>
 ```
 
-Ê¹ÓÃ `SHOW DATABASES` ÏÔÊ¾µ±Ç°·şÎñÆ÷ÖĞµÄËùÓĞÊı¾İ¿â£º
+ä½¿ç”¨ `SHOW DATABASES` æ˜¾ç¤ºå½“å‰æœåŠ¡å™¨ä¸­çš„æ‰€æœ‰æ•°æ®åº“ï¼š
 
 ```bash
 mysql> show databases;
 ```
 
-ÕâÊÇÊä³ö£º
+è¿™æ˜¯è¾“å‡ºï¼š
 
 ```bash
 +--------------------+
@@ -122,9 +122,9 @@ mysql> show databases;
 +--------------------+
 4 rows in set (0.05 sec)
 ```
-ÉÏÃæÏÔÊ¾µÄÊı¾İ¿â£¬ÊÇ MySQL ·şÎñÆ÷×Ô´øÊı¾İ¿â¡£
+ä¸Šé¢æ˜¾ç¤ºçš„æ•°æ®åº“ï¼Œæ˜¯ MySQL æœåŠ¡å™¨è‡ªå¸¦æ•°æ®åº“ã€‚
 
-²Î¿¼
+å‚è€ƒ
 
 https://dev.mysql.com/downloads/repo/yum/
 

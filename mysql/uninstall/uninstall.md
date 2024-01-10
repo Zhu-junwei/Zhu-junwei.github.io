@@ -1,48 +1,48 @@
-# Ð¶ÔØ
-³¹µ×Ð¶ÔØ MySQL °üÀ¨É¾³ýÈí¼þ°ü¡¢ÇåÀíÅäÖÃÎÄ¼þ¡¢É¾³ýÊý¾ÝÄ¿Â¼µÈ²½Öè¡£ÒÔÏÂÊÇÔÚ CentOS 7 ÉÏ³¹µ×Ð¶ÔØ MySQL µÄ²½Öè£º
+# å¸è½½
+å½»åº•å¸è½½ MySQL åŒ…æ‹¬åˆ é™¤è½¯ä»¶åŒ…ã€æ¸…ç†é…ç½®æ–‡ä»¶ã€åˆ é™¤æ•°æ®ç›®å½•ç­‰æ­¥éª¤ã€‚ä»¥ä¸‹æ˜¯åœ¨ CentOS 7 ä¸Šå½»åº•å¸è½½ MySQL çš„æ­¥éª¤ï¼š
 
-Í£Ö¹ MySQL ·þÎñ£º
+åœæ­¢ MySQL æœåŠ¡ï¼š
 ```bash
 sudo systemctl stop mysqld
 ```
-ÒÆ³ý MySQL Èí¼þ°ü£º
+ç§»é™¤ MySQL è½¯ä»¶åŒ…ï¼š
 
-Ê¹ÓÃ yum ÒÆ³ý MySQL Èí¼þ°ü£º
+ä½¿ç”¨ yum ç§»é™¤ MySQL è½¯ä»¶åŒ…ï¼š
 ```bash
 sudo yum remove mysql-community-server -y
 ```
-É¾³ý MySQL Ïà¹ØµÄÊý¾ÝÄ¿Â¼£º
+åˆ é™¤ MySQL ç›¸å…³çš„æ•°æ®ç›®å½•ï¼š
 ```bash
 sudo rm -rf /var/lib/mysql
 ```
-É¾³ý MySQL ÅäÖÃÎÄ¼þ£º
+åˆ é™¤ MySQL é…ç½®æ–‡ä»¶ï¼š
 ```bash
 sudo rm -rf /etc/my.cnf
 ```
 
-È·ÈÏÊÇ·ñÓÐÊ£ÓàÎÄ¼þ£º
+ç¡®è®¤æ˜¯å¦æœ‰å‰©ä½™æ–‡ä»¶ï¼š
 ```bash
 ls /etc/ | grep mysql
 ```
-Èç¹û»¹ÓÐ²ÐÁôµÄ MySQL ÅäÖÃÎÄ¼þ£¬ÇëÊÖ¶¯É¾³ý¡£
+å¦‚æžœè¿˜æœ‰æ®‹ç•™çš„ MySQL é…ç½®æ–‡ä»¶ï¼Œè¯·æ‰‹åŠ¨åˆ é™¤ã€‚
 
-É¾³ý MySQL µÄÈÕÖ¾ÎÄ¼þ£º
+åˆ é™¤ MySQL çš„æ—¥å¿—æ–‡ä»¶ï¼š
 ```bash
 sudo rm -rf /var/log/mysqld.log
 ```
-Ð¶ÔØ MySQL ÒÀÀµµÄ°ü£¨¿ÉÑ¡£©£º
+å¸è½½ MySQL ä¾èµ–çš„åŒ…ï¼ˆå¯é€‰ï¼‰ï¼š
 ```bash
 sudo yum autoremove -y
 ```
-ÇåÀíÏµÍ³»º´æ£º
+æ¸…ç†ç³»ç»Ÿç¼“å­˜ï¼š
 ```bash
 sudo yum clean all
 ```
-¸üÐÂÏµÍ³»º´æ£º
+æ›´æ–°ç³»ç»Ÿç¼“å­˜ï¼š
 ```bash
 sudo yum makecache
 ```
-ÖØÆôÏµÍ³£º
+é‡å¯ç³»ç»Ÿï¼š
 ```bash
 sudo reboot
 ```
