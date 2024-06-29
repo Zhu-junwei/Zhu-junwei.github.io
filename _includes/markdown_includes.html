@@ -1,0 +1,8 @@
+{% for page in site.pages %}
+  {% if page.extname == ".md" %}
+    <article>
+      <h2>{{ page.title | default: page.name }}</h2>
+      {{ page.content }}
+    </article>
+  {% endif %}
+{% endfor %}
