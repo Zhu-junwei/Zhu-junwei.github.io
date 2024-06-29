@@ -1,1 +1,6 @@
 theme: jekyll-theme-minimal
+title: My GitHub Pages Site
+description: A simple site using GitHub Pages and Jekyll
+markdown: kramdown
+plugins:
+  - jekyll-include-all
