@@ -4,3 +4,7 @@ description: A simple site using GitHub Pages and Jekyll
 markdown: kramdown
 plugins:
   - jekyll-include-all
+
+include: 
+  - _includes/markdown_includes.html
+
